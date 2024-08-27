@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#form').onsubmit = function(){
+                if(checkForm())
+                {
+                    alert(`Form is valid`);
+                }
+                else
+                {
+                    alert(`Form is not valid. Please check your inputs`);
+                }
+            }
+
+            function checkForm()
+            {
+                const name = document.querySelector('#full_name').value;
+                const username = document.querySelector('#username').value;
+                const password = document.querySelector('#password').value;
+                const re_enter_password = document.querySelector('#re-enter_password').value;
+                const email = document.querySelector('#email').value;
+                const phone_number = document.querySelector('#phone_number').value;
+                const answer = document.querySelector('#answer').value;
+                
+                if (!full_name || !username || !password || !re_enter_password || !email) {
+                    alert('Please enter your information.');
+                    return false;
+                }
+                if(username.length < 8)
+                {
+                    alert(`Username must have at least 8 characters`);
+                    return false;
+                }
+                if(re-enter_password !== password)
+                {
+                    alert(`Re-enter password must match the password`);
+                    return false;
+                }
+                if(!email.includes('@'))
+                {
+                    alert(`Your email must includes "@"`);
+                    return false;
+                }
+                return true;
+            }
+        })
+    </script>
+</head>
+<body>
+    <form id="form">
+        Full name (*)
+        <input type="text" name="" id="full_name"><br>
+        Username (*)
+        <input type="text" name="" id="username"><br>
+        Password (*)
+        <input type="text" name="" id="password"><br>
+        Re-enter password (*)
+        <input type="text" name="" id="re-enter_password"><br>
+        Country (*)
+        <select name="" id="country">
+            <option value="null"></option>
+            <option value="vietnam">Viet Nam</option>
+            <option value="china">China</option>
+            <option value="usa">USA</option>
+            <option value="france">France</option>
+            <option value="italia">Italia</option>
+        </select><br>
+        Email (*)
+        <input type="text" name="" id="email"><br>
+        Phone number (*)
+        <input type="text" name="" id="phone_number"><br>
+        Secret Question (*)
+        <select name="" id="secret_question">
+            <option value="0"></option>
+            <option value="1">What is my favorite animal?</option>
+            <option value="2">Where is my house?</option>
+            <option value="3">Am i Vietnamese?</option>
+            <option value="4">What is the version of my phone?</option>
+        </select><br>
+        Answer (*)
+        <input type="text" id="answer"><br>
+        <input type="submit" name="" id="check" value="Check">
+        <input type="submit" name="" id="registry" value="Registry">
+    </form>
+</body>
+</html>

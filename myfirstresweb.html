@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (min-width: 700px){
+            .container-1{
+                display: flex;
+                width: 100%;
+                background-color: #0c4ca3;
+                justify-content:center ;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;     
+            }
+            .hello {
+                display: flex;
+                height: 50px;
+                line-height:36px ;
+                width: 1200px;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                background-color: #0c4ca3;
+            }
+            .li { 
+                padding: 8px;
+                background-color: #0c4ca3;
+                border-right: 1px solid #000;
+            }
+            .sub-menu-link {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-weight: 300;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .sub-menu:hover {
+            background-color:#032049 ;
+            }    
+        }
+        @media (max-width: 699px){
+            ul.hello{
+                margin: 0;
+                padding: 0;
+                width: 200px;
+                background-color: #f9f1f1;
+                border: 2px solid black;
+            }
+            li{
+                border: 1px solid black;
+            }
+            a{
+                display: block;
+                color: #111111;
+                padding: 8px;
+                text-decoration: none;
+            }
+            a:hover{
+                background-color: #555555;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <nav class="container-1">
+        <ul class="hello">
+            <li><a href="/2-LoginFBForm.html">Trang chủ</a></li>
+            <li><a href="/2-InformationForm.html">Tin tức</a></li>
+            <li><a href="/1-Selectform.html">Đào tạo</a></li>
+            <li><a href="/1-LoginForm.html">Tư vấn tuyển sinh</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
